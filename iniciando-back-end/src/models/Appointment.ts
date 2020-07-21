@@ -1,10 +1,12 @@
 import { uuid } from 'uuidv4';
+import { Entity } from 'typeorm';
 
 interface AppointmentConstructor {
   provider: string;
   date: Date;
 }
 
+@Entity('appointments')
 class Appointment {
   id: string;
 
